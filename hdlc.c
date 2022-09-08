@@ -86,7 +86,7 @@ static void aprs_print_ax25call(unsigned char *call, int is_repeater)
 	int i;
 	for (i = 0; i < 6; i++)
 		if ((call[i] &0xfe) != 0x40)
-			verbprintf(0, "%c",call[i] >> 1);
+			verbprintf(0, "%02X",call[i] >> 1);
 	int ssid = (call[6] >> 1) & 0xf;
 	if (ssid)
 		verbprintf(0, "-%u",ssid);
@@ -131,7 +131,7 @@ static void aprs_disp_packet(unsigned char *bp, unsigned int len)
 	if(!len)
 		return;
 	while (len) {
-		verbprintf(0, "%c",*bp++);
+		verbprintf(0, "%02x",*bp++);
 		len--;
 	}
 	verbprintf(0, "\n");
