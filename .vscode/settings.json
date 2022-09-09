@@ -1,0 +1,5 @@
+{
+    "cmake.configureOnOpen": true,
+    "clangd.onConfigChanged": "restart",
+    "clangd.path": "clangd-15"
+}

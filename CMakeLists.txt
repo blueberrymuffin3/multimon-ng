@@ -16,6 +16,7 @@ set( MAJOR "1" )
 set( MINOR "2" )
 set( PATCH "0" )
 set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra" )
+set( CMAKE_EXPORT_COMPILE_COMMANDS ON )
 
 if( WIN32 )
 	add_definitions( "-DWIN32_AUDIO" "-DONLY_RAW" "-DWINDOWS" )

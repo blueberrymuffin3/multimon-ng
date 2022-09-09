@@ -1,0 +1,8 @@
+tasks:
+  - before: sudo install-packages libpulse-dev clangd-15
+    init: mkdir -p build && ( cd build && cmake .. && make )
+
+vscode:
+  extensions:
+    - llvm-vs-code-extensions.vscode-clangd
+    - ms-vscode.cmake-tools
